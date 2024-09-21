@@ -1,0 +1,46 @@
+Project Code:
+
+
+quiz = [
+    {
+        "question": "What has keys but can't open locks?",
+        "options": ["A. A piano", "B. A car", "C. A treasure chest", "D. A phone"],
+        "correct_answer": "A"
+    },
+    {
+        "question": "Why did the scarecrow win an award?",
+        "options": ["A. Because he was outstanding in his field", "B. Because he was good at singing", "C. Because he told the best jokes", "D. Because he had a great outfit"],
+        "correct_answer": "A"
+    },
+    {
+        "question": "What gets wetter the more it dries?",
+        "options": ["A. A towel", "B. A sponge", "C. A raincoat", "D. A river"],
+        "correct_answer": "A"
+    },
+    {
+        "question": "What has a head, a tail, but no body?",
+        "options": ["A. A coin", "B. A snake", "C. A pencil", "D. A bottle"],
+        "correct_answer": "A"
+    },
+    {
+        "question": "What can travel around the world while staying in a corner?",
+        "options": ["A. A stamp", "B. A shadow", "C. A spider", "D. A compass"],
+        "correct_answer": "A"
+    }
+]
+score = 0
+
+for item in quiz:
+    print(item["question"])
+    for option in item["options"]:
+        print(option)
+ 
+    user_answer = input("Please choose the correct option (A, B, C, or D): ").strip().upper()
+  
+    if user_answer == item["correct_answer"]:
+        print("Correct! Shabash!\n")
+        score += 1	
+    else:
+        print (f" Nahi yaar, wrong! The correct answer is {item['correct_answer']}.\n")
+
+print(f"Your final score is: {score}/{len(quiz)}")
